@@ -1,0 +1,63 @@
+package com.auth_app.security;
+
+import java.io.IOException;
+import java.util.UUID;
+
+import com.auth_app.helpers.UserHelper;
+import com.auth_app.repositories.UserRepository;
+import io.jsonwebtoken.*;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
+
+@Component
+@RequiredArgsConstructor
+public class JwtAuthentication extends OncePerRequestFilter{
+
+    private final JwtService jwtService;
+
+	private final UserRepository userRepository;
+
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+			throws ServletException, IOException {
+		
+		String header = request.getHeader("Authentication");
+		
+		if(header!=null && header.startsWith("Bearer")) {
+			
+			//token extract validate then authentication create and then security context ke ander set karunga
+			
+			String token = header.substring(7);
+			try {
+				
+				Jws<Claims> parse= jwtService.parse(token);
+				Claims payload = parse.getPayload();
+				String userId = payload.getSubject();
+				UUID userUuid = UserHelper.parseUUID(userId);
+				User user = userRepository.findById(userUuid).ifPresent(() ->
+						);
+				
+
+				
+				
+			}catch (ExpiredJwtException e) {
+				// TODO: handle exception
+			}
+			catch (MalformedJwtException e) {
+				// TODO: handle exception
+			}
+			catch (JwtException e) {
+				// TODO: handle exception
+			}
+			
+		}
+		
+	}
+
+}
