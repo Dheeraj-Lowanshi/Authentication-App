@@ -1,6 +1,6 @@
 package com.auth_app.services;
 
-import com.auth_app.dtos.UserDto;
+import com.auth_app.Auth.Payload.UserDto;
 
 public interface UserService {
 
@@ -8,7 +8,7 @@ public interface UserService {
     UserDto createUser(UserDto userDto);
 
     //get user by email
-    UserDto getUser(String email);
+    UserDto getUserByEmail(String email);
 
     //update user
     UserDto updateUser(UserDto userDto,String userId);

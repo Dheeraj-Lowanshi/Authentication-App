@@ -1,10 +1,11 @@
 package com.auth_app.security;
 
-import com.auth_app.entities.Role;
-import com.auth_app.entities.User;
+import com.auth_app.Auth.entities.Role;
+import com.auth_app.Auth.entities.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,8 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
+@Getter
+@Setter
 public class JwtService {
     private final SecretKey key;
     private final long accessTtlSeconds;

@@ -1,6 +1,6 @@
 package com.auth_app.dtos;
 
-import com.auth_app.entities.Provider;
+import com.auth_app.Auth.entities.Provider;
 import lombok.*;
 
 import java.time.Instant;

@@ -1,14 +1,13 @@
-package com.auth_app.security;
+package com.auth_app.Auth.services.Impl;
 
-import com.auth_app.entities.Provider;
-import com.auth_app.entities.RefreshToken;
-import com.auth_app.entities.User;
-import com.auth_app.repositories.RefreshTokenRepository;
-import com.auth_app.repositories.UserRepository;
+import com.auth_app.Auth.entities.Provider;
+import com.auth_app.Auth.entities.RefreshToken;
+import com.auth_app.Auth.entities.User;
+import com.auth_app.Auth.repositories.RefreshTokenRepository;
+import com.auth_app.Auth.repositories.UserRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;

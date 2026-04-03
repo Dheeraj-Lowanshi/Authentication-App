@@ -1,8 +1,6 @@
 package com.auth_app.security;
 
-import com.auth_app.entities.User;
-import com.auth_app.exceptions.ResourceNotFoundException;
-import com.auth_app.repositories.UserRepository;
+import com.auth_app.Auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UserDetails;

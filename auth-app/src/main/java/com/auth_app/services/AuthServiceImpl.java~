@@ -1,4 +1,0 @@
-package com.auth_app.services;
-
-public class AuthServiceImpl implements AuthService{
-}

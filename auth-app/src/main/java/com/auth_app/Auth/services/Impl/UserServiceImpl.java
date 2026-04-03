@@ -1,11 +1,14 @@
 package com.auth_app.services.Impl;
 
-import com.auth_app.dtos.UserDto;
-import com.auth_app.entities.Provider;
-import com.auth_app.entities.User;
+import com.auth_app.Auth.Config.AppConstants;
+import com.auth_app.Auth.Payload.UserDto;
+import com.auth_app.Auth.entities.Provider;
+import com.auth_app.Auth.entities.Role;
+import com.auth_app.Auth.entities.User;
 import com.auth_app.exceptions.ResourceNotFoundException;
 import com.auth_app.helpers.UserHelper;
-import com.auth_app.repositories.UserRepository;
+import com.auth_app.Auth.repositories.RoleRepository;
+import com.auth_app.Auth.repositories.UserRepository;
 import com.auth_app.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -23,6 +26,7 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
+    private final RoleRepository roleRepository;
 
     @Override
     @Transactional
@@ -36,8 +40,8 @@ public class UserServiceImpl implements UserService {
         // if you have extra checks __put here...
         User user = modelMapper.map(userDto, User.class);
         user.setProvider(userDto.getProvider() != null ? userDto.getProvider() : Provider.LOCAL);
-        //role assign here to user___for authorization
-        //TODO:
+        Role role = roleRepository.findByName("ROLE_" + AppConstants.GUEST_ROLE).orElse(null);
+        user.getRoles().add(role);
         User savedUser = userRepository.save(user);
         return modelMapper.map(savedUser, UserDto.class);
     }

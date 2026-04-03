@@ -45,7 +45,7 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Provider provider=Provider.LOCAL;
 
-    
+    private String providerId;
     
     @ManyToMany(fetch = FetchType.EAGER) 
     @JoinTable(name = "user_roles",
@@ -72,7 +72,6 @@ public class User implements UserDetails {
         		.stream()
         		.map(role -> new SimpleGrantedAuthority(role.getName()))
         		.toList();
-
     }
 
     @Override
