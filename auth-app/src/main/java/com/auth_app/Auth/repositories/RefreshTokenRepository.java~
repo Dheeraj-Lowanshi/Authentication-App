@@ -1,4 +1,4 @@
-package com.auth_app.Auth.repositories;
+package com.auth_app.repositories;
 
 import com.auth_app.Auth.entities.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;

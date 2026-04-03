@@ -1,9 +1,9 @@
-package com.auth_app.services.Impl;
+package com.auth_app.Auth.services.Impl;
 
 import com.auth_app.Auth.Payload.UserDto;
 import com.auth_app.Auth.repositories.RoleRepository;
-import com.auth_app.services.AuthService;
-import com.auth_app.services.UserService;
+import com.auth_app.Auth.services.UserService;
+import com.auth_app.Auth.services.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

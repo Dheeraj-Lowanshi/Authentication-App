@@ -1,11 +1,10 @@
-package com.auth_app.entities;
+package com.auth_app.Auth.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.time.Instant;
 import java.util.*;

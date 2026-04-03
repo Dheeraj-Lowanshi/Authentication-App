@@ -1,8 +1,8 @@
-package com.auth_app.controllers;
+package com.auth_app.Auth.controllers;
 
 
-import com.auth_app.dtos.UserDto;
-import com.auth_app.services.UserService;
+import com.auth_app.Auth.Payload.UserDto;
+import com.auth_app.Auth.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

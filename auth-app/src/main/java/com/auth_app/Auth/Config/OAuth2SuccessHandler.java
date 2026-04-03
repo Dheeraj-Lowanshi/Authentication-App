@@ -1,10 +1,12 @@
-package com.auth_app.Auth.services.Impl;
+package com.auth_app.Auth.Config;
 
 import com.auth_app.Auth.entities.Provider;
 import com.auth_app.Auth.entities.RefreshToken;
 import com.auth_app.Auth.entities.User;
 import com.auth_app.Auth.repositories.RefreshTokenRepository;
 import com.auth_app.Auth.repositories.UserRepository;
+import com.auth_app.Auth.services.Impl.CookieService;
+import com.auth_app.Auth.services.Impl.JwtService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,6 +1,7 @@
-package com.auth_app.Auth.services.Impl;
+package com.auth_app.Auth.Config;
 
-import com.auth_app.helpers.UserHelper;
+import com.auth_app.Auth.services.Impl.JwtService;
+import com.auth_app.Auth.helpers.UserHelper;
 import com.auth_app.Auth.repositories.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

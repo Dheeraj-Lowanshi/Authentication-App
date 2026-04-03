@@ -1,4 +1,4 @@
-package com.auth_app.security;
+package com.auth_app.Auth.services.Impl;
 
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.Getter;

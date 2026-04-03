@@ -1,4 +1,4 @@
-package com.auth_app.services;
+package com.auth_app.Auth.services;
 
 import com.auth_app.Auth.Payload.UserDto;
 

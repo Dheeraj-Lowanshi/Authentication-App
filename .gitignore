@@ -1,0 +1,30 @@
+# ======================
+# Backend (Spring Boot)
+# ======================
+auth-app/target/
+auth-app/*.log
+
+# ======================
+# Frontend (React)
+# ======================
+auth-front/node_modules/
+auth-front/build/
+
+# ======================
+# IDE Files
+# ======================
+.metadata/
+.idea/
+.vscode/
+
+# ======================
+# Environment files
+# ======================
+.env
+*.env
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db

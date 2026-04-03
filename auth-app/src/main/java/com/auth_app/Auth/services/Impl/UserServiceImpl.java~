@@ -7,7 +7,7 @@ import com.auth_app.Auth.entities.Role;
 import com.auth_app.Auth.entities.User;
 import com.auth_app.Auth.services.UserService;
 import com.auth_app.exceptions.ResourceNotFoundException;
-import com.auth_app.Auth.helpers.UserHelper;
+import com.auth_app.helpers.UserHelper;
 import com.auth_app.Auth.repositories.RoleRepository;
 import com.auth_app.Auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.auth_app.config;
+package com.auth_app.Auth.Config;
 
 public class AppConstants {
     public static final String[] AUTH_PUBLIC_URLS={

@@ -1,6 +1,6 @@
 package com.auth_app.Auth.repositories;
 
-import com.auth_app.Auth.entities.User;
+import com.auth_app.Auth.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,9 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, UUID> {
+public interface RoleRepository extends JpaRepository<Role, UUID> {
+    Optional<Role> findByName(String name);
 
-    Optional<User>findByEmail(String email);
-    
-    boolean existsByEmail(String email);
 }

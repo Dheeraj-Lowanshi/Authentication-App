@@ -1,4 +1,4 @@
-package com.auth_app.helpers;
+package com.auth_app.Auth.helpers;
 
 import java.util.UUID;
 

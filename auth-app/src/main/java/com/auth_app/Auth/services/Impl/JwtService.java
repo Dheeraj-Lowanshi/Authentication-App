@@ -1,4 +1,4 @@
-package com.auth_app.security;
+package com.auth_app.Auth.services.Impl;
 
 import com.auth_app.Auth.entities.Role;
 import com.auth_app.Auth.entities.User;

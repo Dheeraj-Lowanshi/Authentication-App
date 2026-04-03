@@ -1,5 +1,6 @@
-package com.auth_app.dtos;
+package com.auth_app.Auth.Payload;
 
+import com.auth_app.Auth.Payload.RoleDto;
 import com.auth_app.Auth.entities.Provider;
 import lombok.*;
 
